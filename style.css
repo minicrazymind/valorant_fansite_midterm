@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #343c4d;
+}
+
+.bgImage {
+  position: fixed; /*keeps background from moving while rest of site scrolls*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw; /*These two make the bg fullscreen*/
+  height: 100vh;
+  z-index: -1;
+}
+
+.bgImage.home {
+  background-image: url('data/bg_2.png'); /*Background image*/
+
+}
+
+.bgImage.blue {
+  background-image: url('data/bg_4.png'); /*Background image*/
+  position: fixed; /*keeps background from moving while rest of site scrolls*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  padding-left: 5vmin; /* Logo placement */
+  padding-top: 5vmin;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.logo > a > img {
+  width: 6vw; /* Fixing logo img size */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #cb2648;
+  box-shadow: 1px 10px 45px 0px rgba(255,0,38,0.7);
+  z-index: 1;
+}
+
+.dropdown-content.blue {
+  background-color: #6162df;
+  box-shadow: 1px 10px 45px 0px rgba(97, 98, 223,0.7);
+}
+
+
+.dropdown-content a {
+  color: white;
+  padding: 1vh 2vw;
+  text-decoration: none;
+  display: flex;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.logo:hover .dropdown-content {
+  display: block;
+
+}
+
+
+.mainContainer {
+  display: flex; /* Flex on em */
+  justify-content: center; /* Centering everything!!! */
+  flex-direction: column; /* To make content flow up to down */
+
+}
+
+.header {
+  padding-top: 100vh;
+}
+
+.header > h1 {
+  font-family: 'Anton', sans-serif; /* Choosing a nice font */
+  font-weight: bold; /* Bold the font */
+  font-size: 10vw; /* Resizing font */
+  padding: 1vw; /* Padding for aesthetics */
+  letter-spacing: 0.02em;
+  color:white;
+  background-image: url('data/text_bg.png'); /*Background image*/
+  background-repeat: no-repeat;
+}
+
+.space {
+  padding-top: 10vh;
+}
+
+.contentContainer {
+  width: 50vw;
+  color: white; /* Font color */
+  padding: 2vw;
+  font-size: 1.5vmax;
+  font-family: 'Jura', sans-serif; /* Choosing a nice font */
+  font-weight: bold;
+  background-color: #343c4d;
+
+
+  display: flex;
+  align-items: center;
+}
+
+.footer { /* Column here to organize footer items, I use rows in the next few classes to align them on the center*/
+ display: flex;
+ flex-flow: column;
+ background-color: black;
+ width: 100vw;
+ color: #c2c2c2;
+ font-size: 2vmin;
+}
+
+.footerText { /* Need flex here to align text in the center*/
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.fakelinks { /* Need flex again to keep two p tags in a line*/
+  text-decoration: underline;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.footerImage { /* Flex here is for centering images*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footerImage > img {
+  padding: 5vmin;
+  width: 15vw;
+}
