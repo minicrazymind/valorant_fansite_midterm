@@ -2,6 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  /* border: 1px solid white; */
+
 }
 
 body {
@@ -29,10 +32,18 @@ body {
   background-repeat: no-repeat;
 }
 
+.bgImage.green {
+  background-image: url('data/bg_5.png'); /*Background image*/
+  position: fixed; /*keeps background from moving while rest of site scrolls*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .logo {
   padding-left: 5vmin; /* Logo placement */
   padding-top: 5vmin;
   font-family: 'Orbitron', sans-serif;
+  width: 6vw; /* Fixing logo hover area */
 }
 
 .logo > a > img {
@@ -52,22 +63,26 @@ body {
   box-shadow: 1px 10px 45px 0px rgba(97, 98, 223,0.7);
 }
 
+.dropdown-content.green {
+  background-color: #36d95c;
+  box-shadow: 1px 10px 45px 0px rgba(54, 217, 92,0.7);
+}
 
-.dropdown-content a {
+
+.dropdown-content a { /* The dropdown stuff */
   color: white;
   padding: 1vh 2vw;
   text-decoration: none;
   display: flex;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover { /*When hovering, change colors */
   background-color: #ddd;
   color: black;
 }
 
-.logo:hover .dropdown-content {
+.logo:hover .dropdown-content { /*Show the dropdown menu only when hovering the logo */
   display: block;
-
 }
 
 
@@ -93,12 +108,26 @@ body {
   background-repeat: no-repeat;
 }
 
-.space {
-  padding-top: 10vh;
+.centerColumn {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+
+.emptyContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 70vw;
+  padding: 15vw;
 }
 
 .contentContainer {
-  width: 50vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 70vw;
   color: white; /* Font color */
   padding: 2vw;
   font-size: 1.5vmax;
@@ -106,10 +135,25 @@ body {
   font-weight: bold;
   background-color: #343c4d;
 
-
-  display: flex;
-  align-items: center;
+  border: 2px solid #cb2648;
 }
+
+.contentContainer > h2 {
+  font-family: 'Anton', sans-serif; /* Choosing a nice font */
+  font-size: 5vw; /* Resizing font */
+  letter-spacing: 0.03em;
+  color:white;
+}
+
+.textContainer {
+  padding-top: 4vh;
+  line-height: 1.3em;
+}
+
+.contentContainer > img {
+  width: 100%;
+}
+
 
 .footer { /* Column here to organize footer items, I use rows in the next few classes to align them on the center*/
  display: flex;
