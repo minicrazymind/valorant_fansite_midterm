@@ -108,6 +108,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.header.blue {
+  padding-top: 5vh;
+}
+
+.header.blue > h1 {
+  background-image: url('data/text_bg_2.png'); /*Background image*/
+  background-repeat: no-repeat;
+  padding: 15vmin;
+}
+
 .centerColumn {
   display: flex;
   flex-flow: row wrap;
@@ -121,6 +131,14 @@ body {
   justify-content: center;
   width: 70vw;
   padding: 15vw;
+}
+
+.emptyContainer.bigger {
+  padding: 22vw;
+}
+
+.emptyContainer.smaller {
+  padding: 7vw;
 }
 
 .contentContainer {
@@ -138,6 +156,15 @@ body {
   border: 2px solid #cb2648;
 }
 
+.contentContainer.green{
+  border: 2px solid #34eb6e;
+}
+
+.contentContainer.blue{
+  border: 2px solid #549ee8;
+}
+
+
 .contentContainer > h2 {
   font-family: 'Anton', sans-serif; /* Choosing a nice font */
   font-size: 5vw; /* Resizing font */
@@ -145,14 +172,26 @@ body {
   color:white;
 }
 
+.contentContainer > img { /*Image resizing*/
+  width: 100%;
+}
+
+.threeImageColumn {
+  display: flex;
+  flex-direction: row;
+}
+
+.threeImageColumn > img {
+  width: 33%;
+  border: 2px solid #34eb6e;
+}
+
 .textContainer {
   padding-top: 4vh;
+  padding-bottom: 4vh;
   line-height: 1.3em;
 }
 
-.contentContainer > img {
-  width: 100%;
-}
 
 
 .footer { /* Column here to organize footer items, I use rows in the next few classes to align them on the center*/
@@ -186,4 +225,40 @@ body {
 .footerImage > img {
   padding: 5vmin;
   width: 15vw;
+}
+
+.characterContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 2vmin;
+  background-color: #343c4d;
+
+}
+
+.characterContainer > a { /*image formatting inside the outside*/
+  width: 12.5%;
+  height: 25vh;
+}
+
+
+.characterContainer > a > img { /*image formatting inside the container*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.backToTop.green a:visited, a { /*Link color before and after clicked*/
+  color: #34eb6e;
+}
+
+.backToTop.green a:hover{ /*Link color while hovering*/
+  color: #de4b75;
+}
+
+.backToTop.red a:visited, a { /*Link color before and after clicked*/
+  color: #de4b75;
+}
+
+.backToTop.red a:hover{ /*Link color while hovering*/
+  color: #34eb6e;
 }
