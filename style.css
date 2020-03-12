@@ -39,7 +39,9 @@ body {
   background-repeat: no-repeat;
 }
 
+
 .logo {
+  position: fixed;
   padding-left: 5vmin; /* Logo placement */
   padding-top: 5vmin;
   font-family: 'Orbitron', sans-serif;
@@ -141,11 +143,15 @@ body {
   padding: 7vw;
 }
 
+.emptyContainer.smallest {
+  padding: 2vw;
+}
+
 .contentContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 70vw;
+  width: 70vmax;
   color: white; /* Font color */
   padding: 2vw;
   font-size: 1.5vmax;
@@ -224,7 +230,7 @@ body {
 
 .footerImage > img { /*Formatting the images in the footer*/
   padding: 5vmin;
-  width: 15vw;
+  width: 30vmin;
 }
 
 .characterContainer { /*Formatting the container and adding a bg color */
@@ -246,6 +252,67 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+.charName > h2 {
+  font-family: 'Anton', sans-serif; /* Choosing a nice font */
+  font-size: 5vw; /* Resizing font */
+  letter-spacing: 0.03em;
+}
+
+.charName.phoenix > h2 {
+  color:#eb7434;
+}
+
+.charName.jett > h2 {
+  color: #c3d6d5;
+}
+
+.charName.sage > h2 {
+  color: #25e8ae;
+}
+
+.charName.sova > h2 {
+  color: #65a4c2;
+}
+
+.charName.cypher > h2 {
+  color: #487482;
+}
+
+.charName.brimstone > h2 {
+  color: #db571a;
+}
+
+.charName.viper > h2 {
+  color: #0c851e;
+}
+
+.charName.omen > h2 {
+  color: #000000;
+}
+
+
+
+
+.abilitiesContainer { /*One container only takes up 50% of the row*/
+  font-family: 'Questrial', sans-serif; /* Choosing a nice font */
+  width: 50%;
+  color: #bfbfbf;
+}
+
+.abilitiesContainer > h3 {
+  font-size: 3vw; /* Resizing font */
+  letter-spacing: 0.04em;
+}
+
+.abilitiesContainer > img {  /*Image resizing*/
+  width: 100%;
+}
+
+.redText { /*For when I get real frustrated with css selectors*/
+    color: #cb2648;
+}
+
 
 .backToTop.green a:visited, a { /*Link color before and after clicked*/
   color: #34eb6e;
