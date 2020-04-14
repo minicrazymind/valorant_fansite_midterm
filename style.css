@@ -291,6 +291,13 @@ body {
   color: #000000;
 }
 
+.charName.breach > h2 {
+  color: #e8a13c;
+}
+
+.charName.raze > h2 {
+  color: #e33290;
+}
 
 
 
